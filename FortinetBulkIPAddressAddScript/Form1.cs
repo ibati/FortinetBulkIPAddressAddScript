@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FortinetBulkIPAddressAddScript
 {
@@ -17,6 +16,26 @@ namespace FortinetBulkIPAddressAddScript
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void txtIPGrpName_Enter(object sender, EventArgs e)
+        {
+            if (txtIPGrpName.Text == "Enter IP Group Name")
+            {
+                txtIPGrpName.Text = "";
+                txtIPGrpName.ForeColor = Color.DarkMagenta;
+            }
+
+        }
+
+        private void txtIPGrpName_Leave(object sender, EventArgs e)
+        {
+            if (txtIPGrpName.Text == "")
+            {
+                txtIPGrpName.Text = "Enter IP Group Name";
+                txtIPGrpName.ForeColor = Color.SeaGreen;
+            }
+
         }
 
         private void txtIPs_Enter(object sender, EventArgs e)
@@ -49,7 +68,7 @@ namespace FortinetBulkIPAddressAddScript
             string conf2 = "end";
 
             string conf3 = "config firewall addrgrp";
-            string code5 = Environment.NewLine + "    edit deny-ips";
+            string code5 = Environment.NewLine + "    edit ";
             string code6 = Environment.NewLine + "        set member ";
             string code7 = Environment.NewLine + "    next";
             string conf4 = "end";
@@ -66,7 +85,7 @@ namespace FortinetBulkIPAddressAddScript
                 ipgroup.Append(line + " ");
             }
 
-            File.WriteAllText(@"FortinetBulkIPAddressScript.txt", conf1 + Environment.NewLine + ipadress.ToString() + conf2 + Environment.NewLine + conf3 + code5 + code6 + ipgroup.ToString() + code7 + Environment.NewLine + conf4);
+            File.WriteAllText(@"FortinetBulkIPAddressScript.txt", conf1 + Environment.NewLine + ipadress.ToString() + conf2 + Environment.NewLine + conf3 + code5 + txtIPGrpName.Text + code6 + ipgroup.ToString() + code7 + Environment.NewLine + conf4);
         }
 
         private void picGithub_Click(object sender, EventArgs e)
@@ -88,6 +107,8 @@ namespace FortinetBulkIPAddressAddScript
         {
             txtIPs.Text = "Paste the IP Addresses here, without spaces, in lines";
             txtIPs.ForeColor = Color.SeaGreen;
+            txtIPGrpName.Text = "Enter IP Group Name";
+            txtIPGrpName.ForeColor = Color.SeaGreen;
         }
 
 
