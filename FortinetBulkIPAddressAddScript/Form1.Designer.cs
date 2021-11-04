@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.richIPs = new System.Windows.Forms.RichTextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.lbDescrition2 = new System.Windows.Forms.Label();
@@ -37,19 +36,11 @@
             this.picGithub = new System.Windows.Forms.PictureBox();
             this.picTwitter = new System.Windows.Forms.PictureBox();
             this.picWebsite = new System.Windows.Forms.PictureBox();
+            this.txtIPs = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picGithub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWebsite)).BeginInit();
             this.SuspendLayout();
-            // 
-            // richIPs
-            // 
-            this.richIPs.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richIPs.Location = new System.Drawing.Point(55, 60);
-            this.richIPs.Name = "richIPs";
-            this.richIPs.Size = new System.Drawing.Size(274, 497);
-            this.richIPs.TabIndex = 0;
-            this.richIPs.Text = "";
             // 
             // btnCreate
             // 
@@ -79,7 +70,7 @@
             this.lbDescrition2.Font = new System.Drawing.Font("Consolas", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbDescrition2.Location = new System.Drawing.Point(377, 363);
             this.lbDescrition2.Name = "lbDescrition2";
-            this.lbDescrition2.Size = new System.Drawing.Size(150, 84);
+            this.lbDescrition2.Size = new System.Drawing.Size(150, 70);
             this.lbDescrition2.TabIndex = 4;
             this.lbDescrition2.Text = "Additionally, added IP addresses are included in the deny-ip-grp group.";
             // 
@@ -132,11 +123,25 @@
             this.picWebsite.TabStop = false;
             this.picWebsite.Click += new System.EventHandler(this.picWebsite_Click);
             // 
+            // txtIPs
+            // 
+            this.txtIPs.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtIPs.ForeColor = System.Drawing.Color.SeaGreen;
+            this.txtIPs.Location = new System.Drawing.Point(55, 60);
+            this.txtIPs.Multiline = true;
+            this.txtIPs.Name = "txtIPs";
+            this.txtIPs.Size = new System.Drawing.Size(259, 497);
+            this.txtIPs.TabIndex = 9;
+            this.txtIPs.Text = "Paste the IP Addresses here, without spaces, in lines";
+            this.txtIPs.Enter += new System.EventHandler(this.txtIPs_Enter);
+            this.txtIPs.Leave += new System.EventHandler(this.txtIPs_Leave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 651);
+            this.Controls.Add(this.txtIPs);
             this.Controls.Add(this.picWebsite);
             this.Controls.Add(this.picTwitter);
             this.Controls.Add(this.picGithub);
@@ -144,7 +149,6 @@
             this.Controls.Add(this.lbDescrition2);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.richIPs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Fortinet Bulk IP Address Add Script";
@@ -152,12 +156,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWebsite)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richIPs;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lbDescrition2;
@@ -165,6 +168,7 @@
         private System.Windows.Forms.PictureBox picGithub;
         private System.Windows.Forms.PictureBox picTwitter;
         private System.Windows.Forms.PictureBox picWebsite;
+        private System.Windows.Forms.TextBox txtIPs;
     }
 }
 

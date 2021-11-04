@@ -16,33 +16,52 @@ namespace FortinetBulkIPAddressAddScript
     {
         public Form1()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
+        private void txtIPs_Enter(object sender, EventArgs e)
+        {
+            if (txtIPs.Text == "Paste the IP Addresses here, without spaces, in lines")
+            {
+                txtIPs.Text = "";
+                txtIPs.ForeColor = Color.DarkMagenta;
+            }
+
+        }
+
+        private void txtIPs_Leave(object sender, EventArgs e)
+        {
+            if (txtIPs.Text == "")
+            {
+                txtIPs.Text = "Paste the IP Addresses here, without spaces, in lines";
+                txtIPs.ForeColor = Color.SeaGreen;
+            }
+
+        }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string conf1 = "# config firewall address";
+            string conf1 = "config firewall address";
             string code1 = "    edit ";
             string code2 = Environment.NewLine + "        set subnet ";
             string code3 = "/32";
             string code4 = Environment.NewLine + "    next";
             string conf2 = "end";
 
-            string conf3 = "# config firewall addrgrp";
+            string conf3 = "config firewall addrgrp";
             string code5 = Environment.NewLine + "    edit deny-ips";
             string code6 = Environment.NewLine + "        set member ";
             string code7 = Environment.NewLine + "    next";
             string conf4 = "end";
 
             var ipadress = new StringBuilder();
-            foreach (var line in richIPs.Lines)
+            foreach (var line in txtIPs.Lines)
             {
                 ipadress.AppendLine(code1 + line + code2 + line + code3 + code4);
             }
 
             var ipgroup = new StringBuilder();
-            foreach (var line in richIPs.Lines)
+            foreach (var line in txtIPs.Lines)
             {
                 ipgroup.Append(line + " ");
             }
@@ -67,7 +86,10 @@ namespace FortinetBulkIPAddressAddScript
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            richIPs.Text = String.Empty;
+            txtIPs.Text = "Paste the IP Addresses here, without spaces, in lines";
+            txtIPs.ForeColor = Color.SeaGreen;
         }
+
+
     }
 }
