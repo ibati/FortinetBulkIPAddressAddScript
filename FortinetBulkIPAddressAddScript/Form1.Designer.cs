@@ -57,9 +57,9 @@
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCreate.Location = new System.Drawing.Point(285, 212);
+            this.btnCreate.Location = new System.Drawing.Point(285, 310);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(250, 40);
+            this.btnCreate.Size = new System.Drawing.Size(250, 60);
             this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "Create Script";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             this.btnClear.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnClear.ForeColor = System.Drawing.Color.Maroon;
-            this.btnClear.Location = new System.Drawing.Point(285, 258);
+            this.btnClear.Location = new System.Drawing.Point(285, 387);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(250, 40);
+            this.btnClear.Size = new System.Drawing.Size(250, 60);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             // 
             // lbDescrition1
             // 
-            this.lbDescrition1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbDescrition1.Font = new System.Drawing.Font("Consolas", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbDescrition1.Location = new System.Drawing.Point(12, 26);
             this.lbDescrition1.Name = "lbDescrition1";
             this.lbDescrition1.Size = new System.Drawing.Size(535, 40);
@@ -182,10 +182,10 @@
             // 
             // lbDescription2
             // 
-            this.lbDescription2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbDescription2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbDescription2.Location = new System.Drawing.Point(12, 27);
             this.lbDescription2.Name = "lbDescription2";
-            this.lbDescription2.Size = new System.Drawing.Size(224, 147);
+            this.lbDescription2.Size = new System.Drawing.Size(224, 116);
             this.lbDescription2.TabIndex = 6;
             this.lbDescription2.Text = "Please enter the group name first. Then enter all IP addresses in the field. This" +
     " script will first import the IP addresses to Fortinet in bulk and make them a m" +
@@ -197,37 +197,37 @@
             this.grpWarn.Controls.Add(this.lbWarn2);
             this.grpWarn.Controls.Add(this.lbWarn1);
             this.grpWarn.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpWarn.Location = new System.Drawing.Point(285, 304);
+            this.grpWarn.Location = new System.Drawing.Point(285, 176);
             this.grpWarn.Name = "grpWarn";
-            this.grpWarn.Size = new System.Drawing.Size(250, 144);
+            this.grpWarn.Size = new System.Drawing.Size(250, 118);
             this.grpWarn.TabIndex = 12;
             this.grpWarn.TabStop = false;
             this.grpWarn.Text = "Warning";
             // 
             // lbWarn1
             // 
-            this.lbWarn1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbWarn1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbWarn1.Location = new System.Drawing.Point(12, 22);
             this.lbWarn1.Name = "lbWarn1";
-            this.lbWarn1.Size = new System.Drawing.Size(224, 42);
+            this.lbWarn1.Size = new System.Drawing.Size(224, 35);
             this.lbWarn1.TabIndex = 5;
             this.lbWarn1.Text = "Do not leave spaces at the end of IP addresses!";
             // 
             // lbWarn2
             // 
-            this.lbWarn2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbWarn2.Location = new System.Drawing.Point(12, 64);
+            this.lbWarn2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbWarn2.Location = new System.Drawing.Point(12, 57);
             this.lbWarn2.Name = "lbWarn2";
-            this.lbWarn2.Size = new System.Drawing.Size(224, 42);
+            this.lbWarn2.Size = new System.Drawing.Size(224, 35);
             this.lbWarn2.TabIndex = 6;
             this.lbWarn2.Text = "Do not leave spaces between lines!";
             // 
             // lbWarn3
             // 
-            this.lbWarn3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbWarn3.Location = new System.Drawing.Point(12, 106);
+            this.lbWarn3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbWarn3.Location = new System.Drawing.Point(12, 92);
             this.lbWarn3.Name = "lbWarn3";
-            this.lbWarn3.Size = new System.Drawing.Size(224, 25);
+            this.lbWarn3.Size = new System.Drawing.Size(224, 20);
             this.lbWarn3.TabIndex = 7;
             this.lbWarn3.Text = "Do not space the last line!";
             // 
@@ -237,7 +237,7 @@
             this.grpReadMe.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpReadMe.Location = new System.Drawing.Point(285, 24);
             this.grpReadMe.Name = "grpReadMe";
-            this.grpReadMe.Size = new System.Drawing.Size(250, 182);
+            this.grpReadMe.Size = new System.Drawing.Size(250, 146);
             this.grpReadMe.TabIndex = 13;
             this.grpReadMe.TabStop = false;
             this.grpReadMe.Text = "Please Read Me!";
